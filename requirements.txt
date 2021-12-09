@@ -6,4 +6,3 @@ numba
 soundfile
 librosa
 vosk
-jupyterthemes
