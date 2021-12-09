@@ -22,7 +22,7 @@ Détails :
 - Prends ~ 50s sur un i7-9750H
 - Dans la vidéo d'exemple, entre 18 et 21 mots sur 26 sont transcrits (plus souvent 21 que 18).
   
-Preview binder :
+Preview binder : https://mybinder.org/v2/gh/letmeiiiin/sepia/binder-dataset?labpath=dataset.ipynb
 Le code ne tourne pas entièrement sur binder (modèle trop lourd).
 
 Usage :
