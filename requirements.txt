@@ -1,0 +1,9 @@
+youtube-transcript-api
+yt-dlp
+pandas
+pydub
+numba
+soundfile
+librosa
+vosk
+jupyterthemes
