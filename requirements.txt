@@ -1,3 +1,4 @@
+# Tested with python 3.9.7
 youtube-transcript-api
 yt-dlp
 pandas
