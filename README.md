@@ -32,6 +32,6 @@ Usage :
 - Installer ffmpeg https://ffmpeg.org/download.html
 - git clone https://github.com/letmeiiiin/sepia.git
 - cd sepia
-- Créer un environement virtuel sous python 3.9, installer les dépendances (fichier environment.yml pour conda dans le repo
-  ou requirements.txt pour pip)
+- Créer un environement virtuel sous python 3.9
+- pip install -r requirements.txt
 - Jouer avec le notebook "dataset.ipynb"
