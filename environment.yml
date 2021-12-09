@@ -1,0 +1,13 @@
+name: sepia
+dependencies:
+  - python=3.9
+  - youtube-transcript-api
+  - yt-dlp
+  - pandas
+  - pydub
+  - numba
+  - soundfile
+  - librosa
+  - vosk
+  - jupyterthemes
+  
