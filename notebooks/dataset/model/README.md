@@ -1,1 +1,1 @@
-Vosk API model folder, content of vosk model should be extracted here.
+Extraire le modèle Vosk API ici.
