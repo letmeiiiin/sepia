@@ -26,7 +26,7 @@ Preview binder : https://mybinder.org/v2/gh/letmeiiiin/sepia/binder-dataset?labp
 Le code ne tourne pas entièrement sur binder (modèle trop lourd).
 
 Usage :
-- Télécharger un modèle vosk FR, depuis https://alphacephei.com/vosk/modelsex
+- Télécharger un modèle vosk FR, depuis https://alphacephei.com/vosk/models
   ex : https://alphacephei.com/vosk/models/vosk-model-fr-0.6-linto-2.2.0.zip
 - Extraire le contenu du modèle dans le dossier "model" (am, conf, graph, ivector, rescore...)
 - Installer ffmpeg https://ffmpeg.org/download.html
