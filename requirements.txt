@@ -1,0 +1,23 @@
+# Tested with python 3.9.7
+ipykernel
+ipywidgets
+numpy
+pandas
+scipy
+pydub
+pyaudio
+soundfile
+pysoundfile
+
+# dataset
+youtube-transcript-api
+yt-dlp
+srt
+vosk
+
+# wav2vec2
+huggingsound
+pyctcdecode
+https://github.com/kpu/kenlm/archive/master.zip
+webrtcvad
+torchaudio
