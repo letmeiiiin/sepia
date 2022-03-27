@@ -39,3 +39,7 @@ Utiliser un modèle wav2vec2 afin d'identifier en temps réel les mots prononcé
 Utilisation :
 - Configurer un microphone comme microphone par défaut
 - Lancer le notebook "wav2vec2_live_inference.ipynb"
+
+# /notebooks/vosk
+But :
+Utiliser Vosk API afin d'identifier en temps réel les mots prononcés par un orateur et réagir au mot clé "photo".
