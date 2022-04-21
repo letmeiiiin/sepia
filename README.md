@@ -5,6 +5,19 @@
 - git clone https://github.com/letmeiiiin/sepia.git && cd sepia
 - pip install -r requirements.txt
 
+# /prod/main.py
+Programme principal, lancé sur le raspberry.
+
+Fonctionnement :
+- Lancement d'un stream audio stéréo
+- Division du stream stéréo en deux streams mono échantillonés à 16000 Hz
+- Utilise un des stream pour la reconaissance du mot "photo"
+- Localise la provenance du son à l'aide d'une partie de chaque stream mono et renvoie un angle au servomoteur
+- Le servomoteur se tourne
+- La détection du sourire s'enclenche
+- Le programme prend une photo quand un sourire est détecté
+- Le programme affiche la photo
+
 # /notebooks/dataset
 
 But :
