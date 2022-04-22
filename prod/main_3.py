@@ -131,14 +131,14 @@ def locate(channels):
     return angle
 
 
-# Set function to calculate percent from angle
+# Fonction permettant le calcul de l'angle vers un format approprié pour le servomoteur SG90
 def angle_to_percent(angle):
     if angle > 180 or angle < 0:
         return False
 
     start = 4
     end = 22
-    ratio = (end - start)/360  # Calcul ratio from angle to percent
+    ratio = (end - start)/360  #Calcul du ratio
 
     angle_as_percent = angle * ratio
     return start + angle_as_percent
