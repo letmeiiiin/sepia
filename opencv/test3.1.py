@@ -42,7 +42,7 @@ def detect_smile_and_picture(frame):
     return frame
 
 
-def attendre_et_sauvegarder():
+def attendre_et_sauvegarder():      #Fonction permettant la sauvegarde de plusieurs images à la suite (option que l'on ne retient pas dans le montage final)
     global filename
     filename = 'savedImage0.jpg'
     for i in range(0, 5):
