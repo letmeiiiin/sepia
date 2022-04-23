@@ -5,7 +5,7 @@
 - git clone https://github.com/letmeiiiin/sepia.git && cd sepia
 - pip install -r requirements.txt
 
-# /prod/main.py
+# /prod/main_3.py
 Programme principal, lancé sur le raspberry.
 
 Fonctionnement :
