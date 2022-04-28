@@ -3,13 +3,15 @@ import wave
 from array import array
 from struct import pack
 
+"""
+permet de jouer le morceau en paramétre"""
 def play(file):
     CHUNK=1024
     
-    wf=wave.open(file,'rb')
+    wf=wave.open(file,'rb')     #récuperation du fichier .wav
     p=pyaudio.PyAudio()
     
-    stream=p.open(format=p.get_format_from_width(wf.getsampwidth()),
+    stream=p.open(format=p.get_format_from_width(wf.getsampwidth()),  #lancement du stream 
                     channels=wf.getnchannels(),
                     rate=wf.getframerate(),
                     output=True)
@@ -24,4 +26,4 @@ def play(file):
     
     p.terminate()
     
-play('output1.wav')
+play('output1.wav')     

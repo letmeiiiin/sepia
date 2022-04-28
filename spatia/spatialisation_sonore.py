@@ -15,33 +15,33 @@ import math
 import matplotlib.pyplot as plt
 
 Fs,x = spiow.read('mono_left.wav') 
-Fss,y=spiow.read('mono_right.wav')
+Fss,y=spiow.read('mono_right.wav')      #ouverture des fichiers mono gauche et droite
 
-x = np.array(x,dtype='int64')
+x = np.array(x,dtype='int64')       #transformation sous forme de liste
 y= np.array(y,dtype='int64')
 print("entrez la distance")
-dist = float(input())
+dist = float(input())           #valeur de distance entre les 2 micros
 
 N = len(x)
 dur = N/Fs
 t = np.arange(0,dur,1/Fs)
 
-Cxx = spsig.correlate(x,y,'full')
-t_Cxx = np.arange(-dur+1/Fs,dur-1/Fs,1/Fs)
+Cxx = spsig.correlate(x,y,'full')       #correlation 
+t_Cxx = np.arange(-dur+1/Fs,dur-1/Fs,1/Fs)  
 print(t_Cxx[Cxx.argmax()])
-rad=math.acos((340*t_Cxx[Cxx.argmax()])/dist)
-angle=np.degrees(rad)
-print(angle)
+rad=math.acos((340*t_Cxx[Cxx.argmax()])/dist)   #calcul de l'angle en radian selon un calcul trigonométrique
+angle=np.degrees(rad)                           #conversion en degrés
+print(angle)                                    #renvoi un angle entre 0 et 180 où 90°→ immobile <90 → tourne à droite et >90 → tourne à gauche
 if(len(t_Cxx)!=len(Cxx)):
-    for i in range(0,abs(len(t_Cxx)-len(Cxx))):
+    for i in range(0,abs(len(t_Cxx)-len(Cxx))):     #souci de shape des listes
         t_Cxx=np.append(t_Cxx,0)
 
-#t_Cxx=np.append(t_Cxx,0)
+#t_Cxx=np.append(t_Cxx,0)       #visualisation de la corrélation
 plt.figure(figsize=(8,6))
 plt.plot(t_Cxx,Cxx,'k')
 plt.grid()
 plt.xlabel('time shift (s)')
-plt.ylabel('Autocorrelation')
+plt.ylabel('correlation')
 plt.xlim([-dur,dur])
 #plt.xlim([-0.0025,0.0025])
 plt.show()

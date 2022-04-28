@@ -6,9 +6,9 @@ from struct import pack
 
 def record(outputfile):
   FORMAT = pyaudio.paInt16
-  CHANNELS = 2
-  RATE = 44100
-  RECORDS_SECONDS=3
+  CHANNELS = 2          #son stéréo qui sera après découpé en 2 via le programme split.py
+  RATE = 44100          #freq d'échantillonage
+  RECORDS_SECONDS=3   #tps en seondes du record
   CHUNK=1024
 
   p=pyaudio.PyAudio()
@@ -25,7 +25,7 @@ def record(outputfile):
   stream.close()
   p.terminate()
 
-  wf=wave.open(outputfile,'wb')
+  wf=wave.open(outputfile,'wb')             #enregistrement du record sous le bo format
   wf.setnchannels(CHANNELS)
   wf.setsampwidth(p.get_sample_size(FORMAT))
   wf.setframerate(RATE)

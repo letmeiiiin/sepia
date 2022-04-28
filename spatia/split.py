@@ -1,5 +1,8 @@
 from pydub import AudioSegment
+""" Programme qui permet de transformer un code stéréo en 2 codes mono (droite et gauche)
 
+    Ils sont sauvegardés dans l'emplacement du fichier du programme
+"""
 def splitstereo(stereoaudio):
   stereo_audio = AudioSegment.from_file(
     stereoaudio,
