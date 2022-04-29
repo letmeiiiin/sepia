@@ -11,8 +11,8 @@ Programme principal, lancé sur le raspberry.
 Fonctionnement :
 - Lancement d'un stream audio stéréo
 - Division du stream stéréo en deux streams mono échantillonés à 16000 Hz
-- Utilise un des stream pour la reconaissance du mot "photo"
-- Localise la provenance du son à l'aide d'une partie de chaque stream mono et renvoie un angle au servomoteur
+- Utilisation d'un des stream pour la reconaissance du mot "photo"
+- Localisation de la provenance du son à l'aide d'une partie de chaque stream mono et envoi d'un angle au servomoteur
 - Le servomoteur se tourne
 - La détection du sourire s'enclenche
 - Le programme prend une photo quand un sourire est détecté
@@ -29,13 +29,9 @@ Fonctionnement :
 - Stocke les données dans une dataframe
 - Télécharge l'audio de la video, puis convertissement en .wav (mono)
 - Garde seulement les passages où le mot "photo" apparaît
-- Enlève les silences (inutile ?)
 - Utilise vosk: https://github.com/alphacep/vosk-api pour transcrire l'audio mot par mot.
 - Stocke les timestamps de chaque mot dans une liste de tuples
 - Joue le fichier audio final
-  
-Preview binder : https://mybinder.org/v2/gh/letmeiiiin/sepia/binder-dataset?labpath=dataset.ipynb
-ne fonctionne pas pour l'instant.
 
 Utilisation :
 - Le modèle Vosk https://alphacephei.com/vosk/models/vosk-model-small-fr-pguyot-0.3.zip a été extrait dans le dossier "model", pas besoin de le re-extraire.
